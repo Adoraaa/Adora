@@ -382,7 +382,7 @@
     .section-title em { font-style: italic; color: var(--gold); }
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 28px;
     }
     .product-card {
@@ -677,8 +677,8 @@
           <span class="stat-label">Handmade</span>
         </div>
         <div>
-          <span class="stat-num">12+</span>
-          <span class="stat-label">Elegant</span>
+          <span class="stat-num" style="font-size:2.2rem; letter-spacing:-0.02em;">Made to Fit</span>
+          <span class="stat-label">Every foot, every style</span>
         </div>
         <div>
           <span class="stat-num">∞</span>
@@ -715,27 +715,8 @@
     </div>
     <div class="products-grid">
 
-      <!-- Card 1 -->
+      <!-- Card 1: Loafers -->
       <div class="product-card reveal">
-        <div class="product-img">
-          <span class="product-tag">New</span>
-          <svg viewBox="0 0 200 160" width="160" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 118 C45 113, 80 103, 115 101 C145 99, 165 107, 162 117 C158 125, 120 127, 80 126 C50 125, 15 122, 20 118Z" fill="rgba(201,168,76,0.18)" stroke="rgba(201,168,76,0.55)" stroke-width="1.2"/>
-            <path d="M115 101 C115 101, 124 72, 128 55 C131 42, 135 33, 144 30 C153 26, 162 32, 164 43 C167 56, 160 82, 152 98 C147 108, 138 112, 128 113Z" fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.45)" stroke-width="1.2"/>
-            <path d="M128 55 C130 46, 136 38, 144 35" stroke="rgba(201,168,76,0.4)" stroke-width="1.2" fill="none"/>
-            <circle cx="148" cy="40" r="2.5" fill="rgba(201,168,76,0.7)"/>
-            <line x1="118" y1="88" x2="162" y2="82" stroke="rgba(201,168,76,0.25)" stroke-width="1"/>
-            <line x1="116" y1="96" x2="160" y2="91" stroke="rgba(201,168,76,0.25)" stroke-width="1"/>
-          </svg>
-        </div>
-        <p class="product-name">The Aso Pump</p>
-        <p class="product-desc">Suede · Block Heel</p>
-        <p class="product-price">₦85,000</p>
-        <a href="#contact" class="product-action">Enquire</a>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="product-card reveal reveal-delay-1">
         <div class="product-img">
           <svg viewBox="0 0 200 160" width="160" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 122 C50 116, 95 106, 140 104 C165 103, 178 110, 175 120 C172 128, 130 132, 88 131 C55 130, 10 127, 15 122Z" fill="rgba(201,168,76,0.14)" stroke="rgba(201,168,76,0.5)" stroke-width="1.2"/>
@@ -748,12 +729,12 @@
         </div>
         <p class="product-name">Loafers</p>
         <p class="product-desc">Full-grain Leather · Flat</p>
-        <p class="product-price">₦62,500</p>
+        <p class="product-price">₦62,000</p>
         <a href="#contact" class="product-action">Enquire</a>
       </div>
 
-      <!-- Card 3 -->
-      <div class="product-card reveal reveal-delay-2">
+      <!-- Card 2: Oxfords -->
+      <div class="product-card reveal reveal-delay-1">
         <div class="product-img">
           <span class="product-tag" style="background:var(--cream);color:var(--black);">Custom</span>
           <svg viewBox="0 0 200 160" width="160" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -766,7 +747,7 @@
         </div>
         <p class="product-name">Oxfords</p>
         <p class="product-desc">Calfskin · Custom Order</p>
-        <p class="product-price">From ₦75,500</p>
+        <p class="product-price">From ₦110,000</p>
         <a href="#contact" class="product-action">Enquire</a>
       </div>
     </div>
@@ -781,11 +762,11 @@
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="name">Full Name</label>
-            <input class="form-input" id="name" type="text" placeholder="Aniebiet Edet" />
+            <input class="form-input" id="name" type="text" placeholder="Your name" />
           </div>
           <div class="form-group">
             <label class="form-label" for="email">Email</label>
-            <input class="form-input" id="email" type="email" placeholder="anniebietadora001@gmail.com" />
+            <input class="form-input" id="email" type="email" placeholder="you@example.com" />
           </div>
         </div>
         <div class="form-group">
@@ -808,9 +789,9 @@
     <div class="footer-logo">Adoré.ng</div>
     <p class="footer-copy">© 2025 Adoré.ng · All rights reserved</p>
     <div class="footer-socials">
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
-      <a href="#">WhatsApp</a>
+      <a href="https://instagram.com/Aniebiet_edet_" target="_blank">Instagram</a>
+      <a href="https://facebook.com/The Little ShoeMaker" target="_blank">Facebook</a>
+      <a href="https://wa.me/2349054809608" target="_blank">WhatsApp</a>
     </div>
   </footer>
 
@@ -844,7 +825,7 @@
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
     // Submit handler
-    function handZpleSubmit(btn) {
+    function handleSubmit(btn) {
       btn.textContent = 'Sent ✓';
       btn.style.background = 'var(--gold-muted)';
       btn.disabled = true;
